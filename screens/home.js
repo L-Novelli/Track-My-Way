@@ -12,7 +12,7 @@ export default function Home ({ navigation }) {
         })
     }
     const renderGrid = ({item}) => {
-        <Grid item={item} onSelected={handlerSelectedCategory}/>
+       return ( <Grid item={item} onSelected={handlerSelectedCategory}/> )
     }
 
 /*        return(
