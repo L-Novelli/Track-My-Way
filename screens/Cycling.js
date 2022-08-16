@@ -1,13 +1,13 @@
-import {ImageBackground, StyleSheet, Text, View} from 'react-native'
+import {StyleSheet, Text, View} from 'react-native'
 
 import React from "react";
 
-const Kayaking = (route, navigation) => {
+const Cycling = (route, navigation) => {
     return(
+        
             <View style={styles.screen}>
-                <Text> Kayaking </Text>
+                <Text> MTB </Text>
             </View>
-
     )
 }
 
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 })
-export default Kayaking;
+export default Cycling;

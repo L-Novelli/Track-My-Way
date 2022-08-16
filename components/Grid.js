@@ -25,8 +25,8 @@ const styles = StyleSheet.create ({
     container: {
         flex: 1,
         borderRadius: 6,
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'center',
         padding: 8,
         shadowColor: 'black',
         shadowOpacity: 0.26,
@@ -36,6 +36,8 @@ const styles = StyleSheet.create ({
     },
     title: {
         fontFamily: 'font',
+        color: 'white',
+        fontSize: 25,
     }
 })
 
