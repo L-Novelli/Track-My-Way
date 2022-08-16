@@ -2,14 +2,14 @@ import {ImageBackground, StyleSheet, Text, View} from 'react-native'
 
 import React from "react";
 
-const Trekking = (route, navigation) => {
+const Kayaking = (route, navigation) => {
     return(
         <ImageBackground  source={image} 
         resizeMode="cover" 
         style={styles.image}
         >
             <View style={styles.screen}>
-                <Text> Trekking </Text>
+                <Text> Kayaking </Text>
             </View>
 
         </ImageBackground>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
       },
 })
-export default Trekking;
+export default Kayaking;
