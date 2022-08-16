@@ -1,21 +1,36 @@
-import {ImageBackground, StyleSheet, Text, View} from 'react-native'
+import {FlatList, StyleSheet, View} from 'react-native'
 
+import { ACTIONS } from '../data/actions';
+import CatGrid from '../components/catGrid';
 import React from "react";
 
-const Running = (route, navigation) => {
-    return(
-            <View style={styles.screen}>
-                <Text> Running </Text>
-            </View>
+export default function Running ({navigation}) {
+    const handlerSelectedCategory = (item) => {
+        navigation.navigate(item.title, {
+            categoryID: item.id,
+            name: item.title
+        })
+    }
 
+    const renderGrid = ({item}) => {
+        return ( <CatGrid item={item} onSelected={handlerSelectedCategory}/> )
+     }
+
+    return(
+        <View style={styles.screen}>
+        <FlatList
+                data={ACTIONS}
+                keyExtractor={item => item.id}
+                renderItem={renderGrid}
+                numColumns={1}
+                />   
+       </View>
+            
     )
 }
 
 const styles = StyleSheet.create({
     screen: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100%',
-    },
+        backgroundColor: '#000000'
+    }
 })
-export default Running;

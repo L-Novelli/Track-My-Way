@@ -1,12 +1,3 @@
-import { ImageBackground } from "react-native";
-import React from "react";
-
-const image1 = require('../assets/cat wallpaper/cycling.jpg');
-const image2 = require('../assets/cat wallpaper/trekking.jpg');
-const image3 = require('../assets/cat wallpaper/running.jpg');
-const image4 = require('../assets/cat wallpaper/kayaking.jpg');
-
-
 export const CATEGORIES = [
     {
         id: 1,
