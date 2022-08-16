@@ -6,7 +6,7 @@ import React from "react";
 export default function Home ({ navigation }) {
     
     const handlerSelectedCategory = (item) => {
-        navigation.navigate('Products', {
+        navigation.navigate(CATEGORIES, {
             categoryID: item.id,
             name: item.id
         })
@@ -14,15 +14,6 @@ export default function Home ({ navigation }) {
     const renderGrid = ({item}) => {
        return ( <Grid item={item} onSelected={handlerSelectedCategory}/> )
     }
-
-/*        return(
-        <View style={styles.container}>
-            <Text> Mountain Bike</Text>
-            <Button title = "MTB" onPress={() => {navigation.navigate('MTB')}}/>
-            <Text> Road Bike</Text>
-            <Button title = "Road" onPress={() => {navigation.navigate('Road')}}/>
-        </View>
-        ) */
 
     return(
        

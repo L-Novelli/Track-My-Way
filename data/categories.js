@@ -6,11 +6,16 @@ export const CATEGORIES = [
     },
     {
         id: 2,
-        title: 'Road Bike',
+        title: 'Trekking',
         color: '#587D71',
     },
     {
         id: 3,
+        title: 'Running',
+        color: '#006C67',
+    },
+    {
+        id: 4,
         title: 'Profile',
         color: '#C52233',
     },

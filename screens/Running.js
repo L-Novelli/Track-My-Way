@@ -5,14 +5,14 @@ import React from "react";
 const image = require('../assets/roadbike.jpg')
 
 
-const Road = (route, navigation) => {
+const Running = (route, navigation) => {
     return(
         <ImageBackground  source={image} 
         resizeMode="cover" 
         style={styles.image}
         >
             <View style={styles.screen}>
-                <Text> Road </Text>
+                <Text> Running </Text>
             </View>
 
         </ImageBackground>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
       },
 })
-export default Road;
+export default Running;

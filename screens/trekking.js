@@ -5,14 +5,14 @@ import React from "react";
 const image = {uri: 'https://w0.peakpx.com/wallpaper/905/260/HD-wallpaper-mountain-biking-downhill-mtb.jpg'}
 
 
-const MTB = (route, navigation) => {
+const Trekking = (route, navigation) => {
     return(
         <ImageBackground  source={image} 
         resizeMode="cover" 
         style={styles.image}
         >
             <View style={styles.screen}>
-                <Text> MTB </Text>
+                <Text> Trekking </Text>
             </View>
 
         </ImageBackground>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
       },
 })
-export default MTB;
+export default Trekking;
