@@ -3,7 +3,6 @@ import {FlatList, StyleSheet, View} from 'react-native'
 import { ACTIONS } from '../data/actions';
 import CatGrid from '../components/catGrid';
 import React from "react";
-import bikeNav from '../navigations/bikeNav'
 
 export default function Cycling ({navigation}) {
 

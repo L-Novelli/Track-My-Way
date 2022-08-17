@@ -1,11 +1,11 @@
-import Camera from '../screens/Categories/Camera'
+import Camera from '../screens/Camera'
 import Cycling from "../screens/Cycling";
-import Galery from '../screens/Categories/Galery'
-import Map from '../screens/Categories/Map'
+import Galery from '../screens/Galery'
+import Map from '../screens/Map'
 import {NavigationContainer} from "@react-navigation/native";
 import {Platform} from 'react-native';
 import React from "react";
-import Stopwatch from '../screens/Categories/Stopwatch'
+import Stopwatch from '../screens/Stopwatch'
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
