@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-const bikeNav = () => {
+const BikeNav = () => {
     return(
         <NavigationContainer>
         <Stack.Navigator initialRouteName="Cycling" screenOptions={{
@@ -32,4 +32,4 @@ const bikeNav = () => {
     )
 }
 
-export default bikeNav;
+export default BikeNav;

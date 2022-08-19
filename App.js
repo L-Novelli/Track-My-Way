@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
-
 import AppLoading from 'expo-app-loading';
 import AppNavigator from './navigations/appNavigator';
+import { Provider } from 'react-redux';
 import React from 'react';
-import bikeNav from './navigations/bikeNav';
+import store from './store';
 import {useFonts} from 'expo-font'
 
 export default function App() {
@@ -13,8 +12,9 @@ export default function App() {
 
   if (!loaded) return <AppLoading/>
   return (
-    <AppNavigator/>
-    
+    <Provider store={store}>
+      <AppNavigator/>
+    </Provider>
     
   );
 }
