@@ -1,9 +1,6 @@
 import { ADD_PLACE } from '../actions/place.actions'
 import Place from '../../models/Place'
 
-// models
-
-
 const initialState = {
     places: []
 }
@@ -11,10 +8,10 @@ const initialState = {
 export default ( state = initialState, action) => {
     switch(action.type) {
         case ADD_PLACE:
-            const newPlace = { id: Date.now(), title: action.payload.title, image: action.payload.image}
+            const newPlace = new Place (action.payload.id.toString(), action.payload.title, action.payload.image)
             return {
                 ...state,
-                places: [...state.places, newPlace]
+                places: state.places.concat(newPlace)
             }
         default:
             return state

@@ -1,4 +1,4 @@
-import { FlatList, Text } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 
 import PlaceItem from '../components/PlaceItems'
 import React from 'react'
@@ -8,7 +8,7 @@ const Galery = ({ navigation }) => {
     const places = useSelector(state => state.places.places)
 
     const renderItem = (data) => (
-        <PlaceItem
+            <PlaceItem
             title={data?.item.title}
             image={data?.item.image}
             address='Tokyo-3, NeoTokyo, Japan, 2077'
@@ -17,7 +17,8 @@ const Galery = ({ navigation }) => {
     )
 
     return (
-        <>
+        <View style={styles.screen}>
+           <>
         { places && places.length > 0 ? (
                 <FlatList
                     data={places}
@@ -28,9 +29,18 @@ const Galery = ({ navigation }) => {
                 <Text>No places!</Text>
             ) 
         }
-        </>
+        </> 
+        </View>
+        
     )
 }
+
+const styles = StyleSheet.create({
+    screen:{
+        backgroundColor: '#C0C0C0',
+        height: '100%'
+    }
+})
 
 
 export default Galery

@@ -4,7 +4,6 @@ import { Alert, Button, StyleSheet, Text, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 import { COLORS } from '../constants/colors';
-import MapPreview from '../components/MapPreview';
 import { useNavigation } from '@react-navigation/native';
 
 const LocationSelector = ({onLocation, mapLocation}) => {
@@ -62,17 +61,9 @@ const LocationSelector = ({onLocation, mapLocation}) => {
 
     return (
         <View style={styles.container}>
-            <MapPreview location={pickedLocation} style={styles.preview}>
-                <Text>Location en proceso...</Text>
-            </MapPreview>
             <View style={styles.actions}>
-                <Button 
-                    title='Obtener location'
-                    color={COLORS.PEACH_PUFF}
-                    onPress={handleGetLocation}
-                />
                 <Button
-                    title='Elegir del mapa'
+                    title='Choose in map'
                     color={COLORS.LIGTH_PINK}
                     onPress={handlePickOnMap}
                 />

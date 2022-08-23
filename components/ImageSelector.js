@@ -39,9 +39,9 @@ const ImageSelector = props => {
     return (
         <View style={styles.container}>
             <View style={styles.preview}>
-                {!pickedUri ? (<Text>... No Image ...</Text>) : (<Image style={styles.image} source={{uri: pickedUri}}/>)}
+                {!pickedUri ? (<Text>... no Image ...</Text>) : (<Image style={styles.image} source={{uri: pickedUri}}/>)}
             </View>
-            <Button title='SNAP1'
+            <Button title='Take photo'
             color={COLORS.LIGTH_PINK}
             onPress={handlerTakeImage}
             />
