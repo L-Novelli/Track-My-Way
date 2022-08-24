@@ -18,7 +18,7 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home" screenOptions={{
+            <Stack.Navigator initialRouteName="Home" screenOptions={{
             headerStyle: {
                 backgroundColor: Platform.OS === 'android' ? COLORS.primary : COLORS.accent
             },
@@ -42,7 +42,8 @@ const AppNavigator = () => {
 
             
         </Stack.Navigator>
-    </NavigationContainer>
+        </NavigationContainer>
+        
     )
 }
 

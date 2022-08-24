@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 import { COLORS } from '../constants/colors'
 import ImageSelector from '../components/ImageSelector';
-import LocationSelector from '../components/LocationSelector';
 import { addPlace } from '../store/actions/place.actions';
 import { useDispatch } from 'react-redux';
 
@@ -12,7 +11,6 @@ const Camera = ({ navigation, route }) => {
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
     const handleTitleChange = text => setTitle(text)
-    const [location, setLocation] = useState(null);
 
     const handleSave = () => {
         dispatch(addPlace(title, image));

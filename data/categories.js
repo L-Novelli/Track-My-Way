@@ -19,9 +19,4 @@ export const CATEGORIES = [
         title: 'Kayaking',
         color: '#17BEBB',
     },
-    {
-        id: 5,
-        title: 'Profile',
-        color: '#C52233',
-    },
 ];

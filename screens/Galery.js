@@ -11,11 +11,8 @@ const Galery = ({ navigation }) => {
             <PlaceItem
             title={data?.item.title}
             image={data?.item.image}
-            address='Tokyo-3, NeoTokyo, Japan, 2077'
-            onSelect={() => navigation.navigate('Detalle', { placeID: data.item.id } ) }
         />
     )
-
     return (
         <View style={styles.screen}>
            <>

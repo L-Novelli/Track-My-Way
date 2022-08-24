@@ -1,22 +1,22 @@
 import * as FileSystem from 'expo-file-system';
 
-import { API_MAPS_KEY } from '../../constants/DataBase';
 import { insertAddress } from '../../db';
 
 export const ADD_PLACE = 'ADD_PLACE'
 
-export const addPlace = (title, image, location) => {
+export const addPlace = (title, image) => {
     return async dispatch => {
 
-        const Path = FileSystem.documentDirectory + fileName;
+       
         
         const fileName = image.split('/').pop()
+        const Path = FileSystem.documentDirectory + fileName;
         try {
             await FileSystem.moveAsync({
                 from: image,
                 to: Path
             })
-
+            console.log(image)
             const result = await insertAddress(
                 title,
                 Path,
