@@ -4,6 +4,7 @@ import { Alert, Button, StyleSheet, Text, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 import { COLORS } from '../constants/colors';
+import MapPreview from './MapPreview';
 import { useNavigation } from '@react-navigation/native';
 
 const LocationSelector = ({onLocation, mapLocation}) => {
@@ -13,11 +14,12 @@ const LocationSelector = ({onLocation, mapLocation}) => {
     const handleGetLocation = async () => {
         const isLocationOk = await verifyPermissions();
         if (!isLocationOk) {
+
             return
         }
 
         const location = await Location.getCurrentPositionAsync({
-            timeout: 5000,
+            timeout: 2000,
         });
 
         setPickedLocation({
@@ -61,11 +63,14 @@ const LocationSelector = ({onLocation, mapLocation}) => {
 
     return (
         <View style={styles.container}>
+            <MapPreview location={pickedLocation} style={styles.preview}>
+                <Text>location in process</Text>
+            </MapPreview>
             <View style={styles.actions}>
-                <Button
-                    title='Choose in map'
-                    color={COLORS.LIGTH_PINK}
-                    onPress={handlePickOnMap}
+                <Button 
+                    title='Get Location'
+                    color={COLORS.PEACH_PUFF}
+                    onPress={handleGetLocation}
                 />
             </View>
         </View>

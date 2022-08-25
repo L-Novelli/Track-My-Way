@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import { COLORS } from '../constants/colors'
 import ImageSelector from '../components/ImageSelector';
+import LocationSelector from '../components/LocationSelector'
 import { addPlace } from '../store/actions/place.actions';
 import { useDispatch } from 'react-redux';
 
@@ -18,16 +19,17 @@ const Camera = ({ navigation, route }) => {
     }
 
     return (
-        <ScrollView style={{ flex: 1}} scrollEnabled>
-            <Text style={styles.label}>Title</Text>
-            <TextInput 
-                style={styles.input}
-                value={title}
-                onChangeText={handleTitleChange}    
-            />
-            <ImageSelector onImage={image => setImage(image)} />
-            <Button title='Save' color={COLORS.MAROON} onPress={handleSave}/>
-</ScrollView>
+            <ScrollView style={{ flex: 1}} scrollEnabled>
+                <Text style={styles.label}>Title</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={title}
+                        onChangeText={handleTitleChange}    
+                    />
+                <ImageSelector onImage={image => setImage(image)} />
+                <LocationSelector onLocation={setLocation} />
+                <Button title='Save' color={COLORS.MAROON} onPress={handleSave}/>
+            </ScrollView>
     )
 }
 
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 2,
         paddingVertical: 4,
     },
+
 })
 
 export default Camera

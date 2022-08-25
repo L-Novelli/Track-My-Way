@@ -1,9 +1,9 @@
 export const COLORS = {
-    primary: '#F0544F',
-    accent: '#0C1618',
+    primary: '#4C5F6B',
+    accent: '#42F2F7',
     DARK_SIENNA: "#450920",
-    MAROON: "#a53860",
+    MAROON: "#F17105",
     BLUSH: "#da627d",
-    LIGTH_PINK: "#ffa5ab",
-    PEACH_PUFF: "#f9dbbd",
+    LIGTH_PINK: "#16BAC5",
+    PEACH_PUFF: "#C2E812",
     };
