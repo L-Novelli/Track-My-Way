@@ -1,3 +1,1 @@
-Track My Way! (W.I.P.)
-
-Soon out for Android and iOS! 
+Proyecto final del Curso de Desarrollo de APPs en CoderHouse.
