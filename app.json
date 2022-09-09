@@ -34,7 +34,16 @@
         "backgroundColor": "#FFFFFF"
       }
     },
-    
+    "permissions": [
+      "CAMERA",
+      "ACCESS_FINE_LOCATION",
+      "WRITE_EXTERNAL_STORAGE"
+    ],
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyDQHgoO8CrIzG_6ZHhPnNU_HlfuqoHGQqc"
+      }
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
